@@ -72,7 +72,7 @@ router.put('/:id', async (req, res) => {
       },
     });
 
-    const productTags = await ProductTag.findAll({ where: { product_id: req.params.id } });
+    const productTags = await ProductTag.findAll({ where: { tag_id: req.params.id } });
 
     // get list of current product_ids
     const productTagIds = productTags.map(({ product_id }) => product_id);
@@ -92,7 +92,7 @@ router.put('/:id', async (req, res) => {
 
       await ProductTag.destroy({ where: { id: productTagsToRemove } });
       res.json(await ProductTag.bulkCreate(newProductTags));
-  } catch {
+  } catch (err) {
     res.status(500).json(err);
   }
 });
