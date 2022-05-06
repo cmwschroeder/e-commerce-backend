@@ -3,6 +3,8 @@
 
 ## Description
 
+This database program allows you to keep track of information on various products. You have tables set up with categories which will tell you all the products inside of that category, as well as tables for products and tags that the products will have. When viewing products you will see all the info on which category they are a part of and what tags they have. When viewing tags you will view what products have these tags. You can update the products with new information or tags and you can update the tags with new information and products. You can update the categories with different names as well. You may also delete any categories, products, or tags.
+
 ## Table of Contents
 
 * [Technologies](#technologies)
